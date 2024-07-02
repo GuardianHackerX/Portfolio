@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: rgb(2, 94, 89);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgb(67, 187, 181);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #000000;
+    user-select: none;
+}
+
+.navigation {
+    height: 8vh;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.5em;
+    top: 5px;
+    color: #000000;
+    user-select: none;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .4s;
+}
+
+.navigation a:hover {
+    transition: 1s;
+    font-size: 1.6em;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(4, 0, 255);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container {
+    display: flexbox;
+    position: relative;
+    top: 18vh;
+}
+
+.mainSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.leftSection {
+    width: 30%;
+    font-size: 4vh;
+}
+
+.leftSection p {
+    color: rgb(0, 0, 0);
+}
+
+.rightSection img {
+    float: left;
+    width:  80%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+#element {
+    color: aqua;
+}
